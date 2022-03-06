@@ -8,9 +8,9 @@ with open('data.csv', newline='') as data:
         # format row
         printer = ''
         for cell in row:
-            while len(cell)<10:
+            while len(cell)<8:
                 cell = ' ' + cell
-            printer = printer + cell
+            printer = printer + cell + '\t'
         x=float(cell)/5
         a='|'
         b=''
@@ -18,6 +18,6 @@ with open('data.csv', newline='') as data:
         while c<x:
             b=b+a
             c+=1
-        printer = printer + '\t' + b
+        printer = printer + b
         # print row
         print(printer)
